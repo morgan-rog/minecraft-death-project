@@ -18,3 +18,7 @@ variable "public_key" {
   description = "public key for minecraft server key pair"
   type = string
 }
+variable "home_ipv4_cidr" {
+  description = "my ip address for security group whitelist"
+  type = string
+}

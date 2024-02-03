@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# create minecraft user and directory
-#adduser minecraft
+# create minecraft directory
 mkdir /opt/minecraft/
 mkdir /opt/minecraft/server/
 cd /opt/minecraft/server
@@ -18,8 +17,6 @@ curl -o BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSucce
 java -jar BuildTools.jar
 
 # initialize server
-#chown -R minecraft:minecraft /opt/minecraft/
-
 java -Xms1G -Xmx1G -XX:+UseG1GC -jar spigot-1.20.4.jar nogui
 sleep 5
 # eula agreement
